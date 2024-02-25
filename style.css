@@ -1,0 +1,485 @@
+*
+{
+    margin:0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body
+{
+    overflow-x:hidden;
+    position: relative;
+}
+.page1
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+   
+}
+.navBar
+{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items: center;
+    position:fixed;
+    background-color: white;
+    box-shadow: 1px 1px 5px 0px rgb(167, 162, 162);
+    z-index: 9999; 
+}
+.inner
+{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:row;
+    align-items: center;
+}
+.inner img
+{
+    width: 100%;
+    height: 5rem;
+    transform: scale(0.8);
+    margin-top: 0.5rem;
+}
+.inner a
+{
+    color: #000;
+    text-decoration: none;
+}
+.inner a h1::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.15rem;
+    background-color: black;
+    height: 0.15rem;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+.inner a h1:hover:before
+{
+    transform: scaleX(1);
+    transform-origin:left;
+}
+.inner h1
+{
+    font-size: 1.25rem;
+    cursor: pointer;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.inner div
+{
+    transition: 0.4s;
+}
+.inner:nth-child(1)
+{
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.inner:nth-child(1) sup
+{
+    font-size: 0.8rem;
+    position: absolute;
+    top: .5rem;
+}
+.inner :nth-child(2):hover, .inner :nth-child(3):hover, .inner :nth-child(4):hover ,.inner :nth-child(5):hover 
+{
+    transform: scale(1.5);
+}
+.scroll
+{
+    scroll-behavior: smooth;
+    scroll-margin-top: 100px;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    top: 7rem;
+    z-index: -1000;
+}
+.scroll h1
+{
+    font-weight: lighter;
+    font-size:10rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation-name: scroller;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.scroll sup
+{
+    position: relative;
+    top:-0.5rem;
+    font-size: 4.5rem;
+}
+@keyframes scroller
+{
+    to
+    {
+        transform: translate(-40%);
+    }
+}
+.vhead
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 46.5%;
+    position: relative;
+    top: 16%;
+}
+.vhead h1
+{
+    font-size: 1rem;
+    cursor: pointer;
+}
+.vhead a
+{
+    text-decoration: none;
+    color: black;
+}
+.vplayer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.vplayer video
+{
+    width: 47%;
+    position: relative;
+    top: 10rem;
+}
+.logo
+{
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: fixed;
+    top: 56rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+.logo sup
+{
+    font-size: .5rem;
+}
+.page2
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.abtScroll
+{
+    width: 100%;
+    overflow-x:hidden;
+    text-wrap: nowrap;
+    margin-top: 5.25rem;
+    position: relative;
+}
+.abtScroll h1
+{
+    font-size: 3rem;
+    animation-name: scroller1;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    margin-bottom: 0.5rem;
+    font-weight: lighter;
+}
+.abtScroll sup
+{
+    position: relative;
+    top: 0.5rem;
+}
+@keyframes scroller1
+{
+    0%
+    {
+        transform: translate(-50%);
+    }
+}
+.abt
+{
+    width: 100%;
+    position: relative;
+    top: 4.5rem;
+    width: fit-content;
+}
+.abt h1
+{
+    font-size: 3rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight:lighter;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.abt h1:hover
+{
+    transform: scale(1.1);
+    font-weight: lighter;
+}
+.page3
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+.projScroll
+{
+    width: 100%;
+    font-size: 2rem;
+    position: relative;
+    top: 15rem;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.projScroll h1
+{
+    animation-name: pScroller;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes pScroller 
+{
+    100%
+    {
+        transform:translate(-40%);
+    }
+}
+.page4
+{
+    width: 100%;
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
+.bgARK
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.bgARK h1
+{
+    font-size: 20rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    cursor: pointer;
+}
+.bgARK p
+{
+    font-size: 2rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    cursor: pointer;
+}
+.page5
+{
+    position: relative;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.co
+{
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.ce img,.co img
+{
+    width: 70%;
+    height: 30rem;
+    transition: 0.3s;
+}
+.foot
+{
+    font-weight: bold;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.25rem;
+    cursor: pointer;
+}
+.ce
+{
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.ce img:hover ,.co img:hover 
+{
+    transform: scale(1.15);
+}
+.dummy
+{
+}
+.hireScroll
+{
+    width: 100%;
+}
+.hireScroll h1
+{
+ text-wrap: nowrap;
+ margin-bottom: 0.5rem;
+ animation-name: scroller1;
+ animation-name: scroller;
+ animation-duration: 15s;
+ animation-timing-function: linear;
+ animation-direction: alternate;
+ animation-iteration-count: infinite;
+}
+@keyframes scroller1
+{
+    to
+    {
+        transform: translate(-40%);
+    }
+}
+.page6
+{
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page6 p
+{
+    font-size: 20px;
+    font-weight: lighter;
+}
+.page6 h1
+{
+    font-size: 10rem;
+    font-weight: lighter;
+    position: relative;
+}
+.page6 img
+{
+    position: absolute;
+    top:-65%;
+    transform: scale(0.4);
+}
+.page07
+{
+    width: 100%;
+    position: absolute;
+    margin-top: 49rem;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #000;
+    column-gap: 0.75rem;
+    z-index: 1000;
+}
+.col
+{
+    width: 18rem;
+    height: 10rem;
+    border: 2px solid white;
+    text-align: center;
+    transition: 0.5s;
+}
+#ic
+{
+    position: relative;
+    top: -6rem;
+    left: 8rem;
+    width: 2rem;
+    height: 2rem;
+}
+.loc:hover
+{
+    transform: scale(0.95);
+}
+.col h1
+{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.col p
+{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 1rem;
+}
+.col img
+{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.col img:hover
+{
+    transform: scale(0.8);
+}
+.col:hover
+{
+    transform: scale(0.9);
+}
+@media(max-width:800px)
+{
+    .navBar
+    {
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        flex-direction:row;
+        justify-content:space-around;
+        align-items: center;
+        position:fixed;
+        background-color: white;
+        box-shadow: 1px 1px 5px 0px rgb(167, 162, 162);
+        z-index: 9999; 
+    }
+}
